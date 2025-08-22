@@ -16,11 +16,13 @@ function App() {
     }
     event.preventDefault();
   }
+  
   let list = todolist.map((value, index) => {
     return (
       <ToDoListItem value={value} key={index} indexNumber={index} todolist={todolist} setToDoList={setToDoList} />
     )
   })
+  
   return (
     <div className="App">
       <div className="top-input">
