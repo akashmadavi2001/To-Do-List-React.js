@@ -15,7 +15,7 @@ function App() {
       alert("To do name Allready exists...");
     }
     event.preventDefault();
-  }
+  };
   
   let list = todolist.map((value, index) => {
     return (
@@ -38,7 +38,7 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 function ToDoListItem({ value, indexNumber, todolist, setToDoList }) {
   let [status, setstatus] = useState(false);
@@ -52,6 +52,6 @@ function ToDoListItem({ value, indexNumber, todolist, setToDoList }) {
   return (
     <li className={`li ${(status) ? 'checked' : ''}`} onClick={checkedStatus}> {value}<span onClick={deleteRow}>×</span></li>
   )
-}
+};
 
 export default App;
